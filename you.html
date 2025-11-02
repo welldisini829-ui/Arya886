@@ -1,0 +1,147 @@
+<!doctype html>
+
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vans Official - Mockup</title>
+  <style>
+    :root{
+      --bg:#fff;
+      --accent:#ff8a2b; /* orange */
+      --muted:#f2f2f4;
+      --card:#ffffff;
+      --radius:14px;
+      --shadow: 0 6px 18px rgba(17,17,17,0.08);
+      font-family: "Georgia", "Times New Roman", serif;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:#111}/* header */
+.top{
+  background:var(--accent);
+  padding:18px 16px 26px;
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+.logo-wrap{display:flex;align-items:center;gap:12px}
+.logo{width:56px;height:56px;border-radius:50%;background:#000;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700}
+.store-title{font-family: Arial, Helvetica, sans-serif;font-size:18px;color:#1a1a1a}
+
+.search{
+  position:relative;
+  margin-left:auto;
+  width:56%;
+  max-width:420px;
+}
+.search input{width:100%;padding:10px 14px;border-radius:10px;border:0;font-size:14px}
+
+main{padding:18px}
+
+/* top cards carousel-like */
+.carousel{display:flex;gap:12px;overflow-x:auto;padding-bottom:12px}
+.card{min-width:180px;background:var(--card);border-radius:12px;padding:10px;box-shadow:var(--shadow);flex:0 0 auto}
+.card .img{height:110px;border-radius:8px;background:linear-gradient(135deg,#eee,#ddd);display:flex;align-items:center;justify-content:center}
+.price{font-weight:700;margin-top:8px;font-size:14px}
+.badge{display:inline-block;background:#ffd54f;padding:3px 6px;border-radius:6px;font-size:11px;margin-top:6px}
+
+/* promo pill */
+.promo{display:flex;align-items:center;justify-content:center;margin:18px 0;padding:14px;border-radius:999px;background:linear-gradient(90deg,#dfffdc,#cfe7ff);font-size:30px;font-weight:800;letter-spacing:1px}
+
+/* product grid */
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.prod{background:var(--muted);padding:12px;border-radius:12px;text-align:center}
+.prod .pimg{height:110px;border-radius:10px;background:linear-gradient(180deg,#f7f7f9,#eaeaec);display:flex;align-items:center;justify-content:center}
+.pname{margin-top:10px;font-family: 'Georgia', serif;font-size:14px;color:#222}
+
+/* mobile adjustments */
+@media (max-width:420px){
+  .search{width:42%}
+  .card{min-width:220px}
+  .promo{font-size:22px;padding:10px}
+}
+@media (max-width:360px){
+  .products{grid-template-columns:repeat(2,1fr)}
+}
+
+/* small utility styles */
+.center{text-align:center}
+
+  </style>
+</head>
+<body>
+  <header class="top">
+    <div class="logo-wrap">
+      <div class="logo">VANS</div>
+      <div class="store-title">VANS OFFICIAL STORE</div>
+    </div><div class="search">
+  <input type="search" placeholder="Cari produk...">
+</div>
+
+  </header>  <main>
+    <!-- carousel area -->
+    <div class="carousel" aria-hidden="false">
+      <article class="card">
+        <div class="img">
+          <!-- inline SVG placeholder -->
+          <img src="images/hi.jpeg">
+        </div>
+        <div class="price">Rp764.150</div>
+        <div class="badge">PROMO XTRA</div>
+      </article><article class="card">
+    <div class="img">
+      <img src="images/bp.jpeg">
+    </div>
+    <div class="price">Rp594.150</div>
+    <div class="badge">Official Store</div>
+  </article>
+
+  <article class="card">
+    <div class="img">
+      <img src="images/authentic.jpeg">
+    </div>
+    <div class="price">Rp849.150</div>
+    <div class="badge">Best Seller</div>
+  </article>
+</div>
+
+<!-- promo banner -->
+<div class="promo">DISC UP TO 50%</div>
+
+<!-- product grid -->
+<section class="products">
+  <figure class="prod">
+    <div class="pimg"><img src="images/autentik black.jpeg"></div>
+    <figcaption class="pname">vans sk8 low</figcaption>
+  </figure>
+
+  <figure class="prod">
+    <div class="pimg"><img src="images/purple.jpeg"></div>
+    <figcaption class="pname">autentic purple</figcaption>
+  </figure>
+
+  <figure class="prod">
+    <div class="pimg"><img src="images/high.jpeg"></div>
+    <figcaption class="pname">vans sk8 hight</figcaption>
+  </figure>
+
+  <figure class="prod">
+    <div class="pimg"><img src="images/grey.jpeg"></div>
+    <figcaption class="pname">autentic greey</figcaption>
+  </figure>
+
+  <figure class="prod">
+    <div class="pimg"><img src="images/knu.jpeg"></div>
+    <figcaption class="pname">vans knu</figcaption>
+  </figure>
+
+  <figure class="prod">
+    <div class="pimg"><img src="images/black.jpeg"></div>
+    <figcaption class="pname">autentic black</figcaption>
+  </figure>
+
+</section>
+
+  </main>
+</body>
+</html>
