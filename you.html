@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vans Official - Mockup</title>
+  <style>
+    :root{
+      --bg:#fff;
+      --accent:#ff8a2b;
+      --muted:#f2f2f4;
+      --card:#ffffff;
+      --radius:14px;
+      --shadow: 0 6px 18px rgba(17,17,17,0.08);
+      font-family: "Georgia", "Times New Roman", serif;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--bg);color:#111;overflow-x:hidden}
+
+    /* HEADER */
+    .top{
+      background:var(--accent);
+      padding:18px 16px 26px;
+      display:flex;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:14px;
+    }
+    .logo-wrap{display:flex;align-items:center;gap:12px}
+    .logo{
+      width:56px;height:56px;border-radius:50%;
+      background:#000;color:#fff;display:flex;
+      align-items:center;justify-content:center;
+      font-weight:700;font-size:18px;
+    }
+    .store-title{
+      font-family: Arial, Helvetica, sans-serif;
+      font-size:18px;color:#1a1a1a;
+      white-space:nowrap;
+    }
+
+    .search{
+      position:relative;
+      margin-left:auto;
+      flex:1;
+      min-width:150px;
+    }
+    .search input{
+      width:100%;
+      padding:10px 14px;
+      border-radius:10px;
+      border:0;
+      font-size:14px;
+    }
+
+    main{padding:18px;max-width:1000px;margin:auto}
+
+    /* CAROUSEL */
+    .carousel{
+      display:flex;
+      gap:12px;
+      overflow-x:auto;
+      padding-bottom:12px;
+      scroll-snap-type:x mandatory;
+      -webkit-overflow-scrolling:touch;
+    }
+    .carousel::-webkit-scrollbar{display:none}
+    .card{
+      min-width:180px;
+      background:var(--card);
+      border-radius:12px;
+      padding:10px;
+      box-shadow:var(--shadow);
+      flex:0 0 auto;
+      scroll-snap-align:start;
+    }
+    .card .img{
+      height:110px;
+      border-radius:8px;
+      background:linear-gradient(135deg,#eee,#ddd);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .card img{
+      width:100%;
+      height:auto;
+      border-radius:8px;
+    }
+    .price{font-weight:700;margin-top:8px;font-size:14px}
+    .badge{
+      display:inline-block;
+      background:#ffd54f;
+      padding:3px 6px;
+      border-radius:6px;
+      font-size:11px;
+      margin-top:6px;
+    }
+
+    /* PROMO BANNER */
+    .promo{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      margin:18px 0;
+      padding:14px;
+      border-radius:999px;
+      background:linear-gradient(90deg,#dfffdc,#cfe7ff);
+      font-size:26px;
+      font-weight:800;
+      letter-spacing:1px;
+      text-align:center;
+    }
+
+    /* PRODUCT GRID */
+    .products{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(140px, 1fr));
+      gap:18px;
+    }
+    .prod{
+      background:var(--muted);
+      padding:12px;
+      border-radius:12px;
+      text-align:center;
+      box-shadow:0 4px 10px rgba(0,0,0,0.05);
+    }
+    .pimg{
+      height:110px;
+      border-radius:10px;
+      background:linear-gradient(180deg,#f7f7f9,#eaeaec);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .pimg img{
+      width:100%;
+      height:auto;
+      border-radius:10px;
+    }
+    .pname{
+      margin-top:10px;
+      font-family:'Georgia', serif;
+      font-size:14px;
+      color:#222;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width:600px){
+      .store-title{font-size:16px}
+      .promo{font-size:20px;padding:10px}
+      .pimg{height:90px}
+    }
+  </style>
+</head>
+<body>
+  <header class="top">
+    <div class="logo-wrap">
+      <div class="logo">VANS</div>
+      <div class="store-title">VANS OFFICIAL STORE</div>
+    </div>
+    <div class="search">
+      <input type="search" placeholder="Cari produk...">
+    </div>
+  </header>
+
+  <main>
+    <!-- carousel area -->
+    <div class="carousel">
+      <article class="card">
+        <div class="img">
+          <img src="images/hi.jpeg" alt="Vans hi">
+        </div>
+        <div class="price">Rp764.150</div>
+        <div class="badge">PROMO XTRA</div>
+      </article>
+
+      <article class="card">
+        <div class="img">
+          <img src="images/bp.jpeg" alt="Vans BP">
+        </div>
+        <div class="price">Rp594.150</div>
+        <div class="badge">Official Store</div>
+      </article>
+
+      <article class="card">
+        <div class="img">
+          <img src="images/authentic.jpeg" alt="Vans Authentic">
+        </div>
+        <div class="price">Rp849.150</div>
+        <div class="badge">Best Seller</div>
+      </article>
+    </div>
+
+    <!-- promo banner -->
+    <div class="promo">DISC UP TO 50%</div>
+
+    <!-- product grid -->
+    <section class="products">
+      <figure class="prod">
+        <div class="pimg"><img src="images/autentik black.jpeg" alt="Vans Sk8 Low"></div>
+        <figcaption class="pname">Vans Sk8 Low</figcaption>
+      </figure>
+
+      <figure class="prod">
+        <div class="pimg"><img src="images/purple.jpeg" alt="Autentic Purple"></div>
+        <figcaption class="pname">Autentic Purple</figcaption>
+      </figure>
+
+      <figure class="prod">
+        <div class="pimg"><img src="images/high.jpeg" alt="Vans Sk8 High"></div>
+        <figcaption class="pname">Vans Sk8 High</figcaption>
+      </figure>
+
+      <figure class="prod">
+        <div class="pimg"><img src="images/grey.jpeg" alt="Autentic Grey"></div>
+        <figcaption class="pname">Autentic Grey</figcaption>
+      </figure>
+
+      <figure class="prod">
+        <div class="pimg"><img src="images/knu.jpeg" alt="Vans Knu"></div>
+        <figcaption class="pname">Vans Knu</figcaption>
+      </figure>
+
+      <figure class="prod">
+        <div class="pimg"><img src="images/black.jpeg" alt="Autentic Black"></div>
+        <figcaption class="pname">Autentic Black</figcaption>
+      </figure>
+    </section>
+  </main>
+</body>
+</html>
